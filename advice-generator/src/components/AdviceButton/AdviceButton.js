@@ -2,10 +2,13 @@ import React from "react";
 import classes from "./AdviceButton.module.css";
 import dice from "../../images/icon-dice.svg";
 
-const AdviceButton = () => {
-  //temporary solution
+const AdviceButton = (props) => {
   const onClickHandler = () => {
-    window.location.reload(false);
+    fetch(`https://api.adviceslip.com/advice`).then((response) => {
+      return response.json().then((actualData) => {
+        props.onClick(actualData);
+      });
+    });
   };
   return (
     <button className={classes.button} onClick={onClickHandler}>

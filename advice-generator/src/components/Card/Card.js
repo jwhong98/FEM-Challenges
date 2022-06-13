@@ -27,6 +27,10 @@ const Card = () => {
         setData(null);
       });
   }, []);
+
+  const newAdviceHandler = (newAdvice) => {
+    setData(newAdvice);
+  };
   return (
     <>
       {error && (
@@ -37,7 +41,7 @@ const Card = () => {
           <h2>advice #{data.slip.id}</h2>
           <Advice advice={data.slip.advice} />
           <img src={divider} alt="" />
-          <AdviceButton />
+          <AdviceButton onClick={newAdviceHandler} />
         </section>
       )}
     </>
