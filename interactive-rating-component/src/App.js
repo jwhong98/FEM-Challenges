@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState } from "react";
+import Card from "./components/Card/Card";
+import SubmittedCard from "./components/SubmittedCard/SubmittedCard";
 
 function App() {
+  const [submit, setSubmit] = useState(false);
+  const [score, setScore] = useState("");
+
+  const submitHandler = () => {
+    setSubmit(!submit);
+  };
+
+  const scoreHandler = (s) => {
+    setScore(s);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {submit ? (
+        <SubmittedCard score={score} />
+      ) : (
+        <Card submitHandler={submitHandler} scoreHandler={scoreHandler} />
+      )}
+    </>
   );
 }
 
