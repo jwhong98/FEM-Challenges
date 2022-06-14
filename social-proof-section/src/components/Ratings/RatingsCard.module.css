@@ -1,0 +1,21 @@
+.ratingsCardContainer {
+  position: relative;
+  width: 400px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  background: hsl(300, 24%, 96%);
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+}
+
+.rated {
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+}
