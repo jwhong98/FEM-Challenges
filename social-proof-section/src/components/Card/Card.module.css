@@ -1,0 +1,39 @@
+.cardContainer {
+  background: hsl(300, 43%, 22%);
+  width: fit-content;
+  padding: 35px 30px;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 335px;
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+img {
+  border-radius: 100%;
+  width: 40px;
+}
+
+.reviewerInfo {
+}
+
+.name {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.verified {
+  color: hsl(333, 80%, 67%);
+}
+
+.review {
+  font-weight: 500;
+  line-height: 1.5;
+}
