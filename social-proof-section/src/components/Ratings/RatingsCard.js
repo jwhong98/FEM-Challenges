@@ -6,11 +6,11 @@ const RatingsCard = (props) => {
   return (
     <article className={classes.ratingsCardContainer}>
       <div className={classes.stars}>
-        <img src={star} alt="" />
-        <img src={star} alt="" />
-        <img src={star} alt="" />
-        <img src={star} alt="" />
-        <img src={star} alt="" />
+        <img className={classes.icon} src={star} alt="" />
+        <img className={classes.icon} src={star} alt="" />
+        <img className={classes.icon} src={star} alt="" />
+        <img className={classes.icon} src={star} alt="" />
+        <img className={classes.icon} src={star} alt="" />
       </div>
       <p className={classes.rated}>Rated 5 stars in {props.source}</p>
     </article>

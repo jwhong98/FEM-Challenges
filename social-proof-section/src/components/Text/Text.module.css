@@ -1,17 +1,18 @@
 .textContainer {
-  max-width: 380px;
+  max-width: 400px;
 }
 
 h1 {
   color: hsl(300, 43%, 22%);
-  font-size: 50px;
+  font-size: 60px;
   letter-spacing: -2px;
-  margin-bottom: 20px;
   line-height: 0.85;
+  margin-bottom: 30px;
 }
 
-p {
+.textP {
   font-weight: 500;
   line-height: 1.25;
   color: hsl(303, 10%, 53%);
+  font-size: 17px;
 }

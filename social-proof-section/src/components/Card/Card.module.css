@@ -1,27 +1,23 @@
 .cardContainer {
   background: hsl(300, 43%, 22%);
-  width: fit-content;
-  padding: 35px 30px;
+  padding: 35px 32px;
   border-radius: 10px;
   color: #fff;
   display: flex;
   flex-direction: column;
   gap: 25px;
-  max-width: 335px;
+  max-width: 346px;
 }
 
 .reviewer {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
 }
 
 img {
   border-radius: 100%;
   width: 40px;
-}
-
-.reviewerInfo {
 }
 
 .name {
@@ -36,4 +32,6 @@ img {
 .review {
   font-weight: 500;
   line-height: 1.5;
+  font-size: 16px;
+  color: hsl(300, 24%, 96%);
 }

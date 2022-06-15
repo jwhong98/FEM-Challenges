@@ -5,3 +5,11 @@
   font-size: 15px;
   font-family: "League Spartan", sans-serif;
 }
+
+body {
+  background-image: url("./images/bg-pattern-top-desktop.svg"),
+    url("./images/bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: left top, right bottom;
+}

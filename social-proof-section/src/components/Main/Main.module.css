@@ -1,11 +1,34 @@
 .main {
-  padding: 100px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainWrap {
+  width: 100%;
+  max-width: 1100px;
+  height: 100%;
+  max-height: 80vh;
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
-
-section {
+.top,
+.bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.bottom {
+  align-items: flex-end;
+}
+
+.bottom > article:first-child {
+  margin-bottom: 60px;
+}
+
+.bottom > article:nth-child(2) {
+  margin-bottom: 30px;
 }

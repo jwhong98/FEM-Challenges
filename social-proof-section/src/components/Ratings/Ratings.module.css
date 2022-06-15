@@ -5,3 +5,10 @@
   justify-content: center;
   gap: 13px;
 }
+
+article:first-child {
+  right: 120px;
+}
+article:nth-child(2) {
+  right: 60px;
+}
