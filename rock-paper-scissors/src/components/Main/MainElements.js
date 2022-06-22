@@ -11,5 +11,9 @@ export const MainWrapper = styled.section`
   max-width: 800px;
   height: 100%;
   margin: auto;
-  border: 1px solid white;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
 `;

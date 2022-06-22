@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "../Head/Head";
+import MoveSelect from "../MoveSelect/MoveSelect";
 import { MainContainer, MainWrapper } from "./MainElements";
 
 const Main = () => {
@@ -7,6 +8,7 @@ const Main = () => {
     <MainContainer>
       <MainWrapper>
         <Head />
+        <MoveSelect />
       </MainWrapper>
     </MainContainer>
   );
