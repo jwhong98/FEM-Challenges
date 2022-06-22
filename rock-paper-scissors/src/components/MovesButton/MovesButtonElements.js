@@ -4,7 +4,7 @@ export const ButtonContainer = styled.article`
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  padding: 20px;
+  padding: 25px;
   background-image: ${(props) => props.color};
 `;
 
