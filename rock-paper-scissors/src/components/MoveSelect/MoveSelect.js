@@ -8,16 +8,19 @@ import {
 } from "./MoveSelectElements";
 import { rock, paper, scissors } from "../MovesButton/moves";
 
-const MoveSelect = () => {
+const MoveSelect = (props) => {
+  const onClickHandler = (e) => {
+    props.onClick(e.currentTarget.id);
+  };
   return (
     <MovesContainer>
       <MovesWrap>
         <MovesTopRow>
-          <MovesButton {...paper} />
-          <MovesButton {...scissors} />
+          <MovesButton {...paper} size="200px" onClick={onClickHandler} />
+          <MovesButton {...scissors} size="200px" onClick={onClickHandler} />
         </MovesTopRow>
         <MovesBottomRow>
-          <MovesButton {...rock} />
+          <MovesButton {...rock} size="200px" onClick={onClickHandler} />
         </MovesBottomRow>
       </MovesWrap>
     </MovesContainer>

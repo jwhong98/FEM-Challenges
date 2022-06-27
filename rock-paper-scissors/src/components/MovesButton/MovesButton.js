@@ -3,7 +3,12 @@ import { ButtonContainer, ButtonWrap, ButtonImg } from "./MovesButtonElements";
 
 const MovesButton = (props) => {
   return (
-    <ButtonContainer color={props.color} id={props.id}>
+    <ButtonContainer
+      id={props.id}
+      color={props.color}
+      size={props.size}
+      onClick={props.onClick}
+    >
       <ButtonWrap>
         <ButtonImg src={props.img} />
       </ButtonWrap>

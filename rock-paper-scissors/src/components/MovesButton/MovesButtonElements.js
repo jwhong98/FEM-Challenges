@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const ButtonContainer = styled.article`
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  padding: 25px;
+  width: ${(props) => props.size};
+  height: ${(props) => props.size};
+  padding: calc(${(props) => props.size} * 0.125);
   background-image: ${(props) => props.color};
 `;
 
