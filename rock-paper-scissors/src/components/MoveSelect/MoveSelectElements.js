@@ -3,6 +3,7 @@ import bg from "../../images/bg-triangle.svg";
 
 export const MovesContainer = styled.article`
   width: 100%;
+  max-width: 800px;
   height: 100%;
   max-height: 500px;
   background-image: url(${bg});

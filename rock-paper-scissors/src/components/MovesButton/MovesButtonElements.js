@@ -6,6 +6,7 @@ export const ButtonContainer = styled.article`
   height: ${(props) => props.size};
   padding: calc(${(props) => props.size} * 0.125);
   background-image: ${(props) => props.color};
+  cursor: pointer;
 `;
 
 export const ButtonWrap = styled.div`

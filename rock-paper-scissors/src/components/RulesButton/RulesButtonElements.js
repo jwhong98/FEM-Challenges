@@ -15,4 +15,5 @@ export const RulesBtn = styled.button`
   padding: 0.75rem 2.25rem;
   border-radius: 10px;
   line-height: 1;
+  cursor: pointer;
 `;

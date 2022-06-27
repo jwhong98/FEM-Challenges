@@ -9,13 +9,11 @@ export const MainContainer = styled.main`
 
 export const MainWrapper = styled.section`
   width: 100%;
-  max-width: 800px;
   height: 100%;
   margin: auto;
   padding: 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  gap: 30px;
+  gap: 5rem;
 `;

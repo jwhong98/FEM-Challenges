@@ -27,6 +27,9 @@ const Main = () => {
     }
     setDidPick(true);
   };
+  const onPlayAgain = () => {
+    setDidPick(false);
+  };
   return (
     <>
       {isOpen && <RulesModal onToggle={onToggle} />}
@@ -34,7 +37,7 @@ const Main = () => {
         <MainWrapper>
           <Head />
           {didPick ? (
-            <Picks selected={move} />
+            <Picks selected={move} onClick={onPlayAgain} />
           ) : (
             <MoveSelect onClick={onMoveHandler} />
           )}
