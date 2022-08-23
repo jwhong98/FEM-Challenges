@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Form from "../Form/Form";
 import logo from "../../images/card-logo.svg";
 import classes from "./Main.module.css";
+import ThankYou from "../ThankYou/ThankYou";
 
 const Main = () => {
+  const [submitted, setSubmitted] = useState(true);
   return (
     <main>
       <header>
@@ -21,7 +23,7 @@ const Main = () => {
           </div>
         </div>
       </header>
-      <Form />
+      {submitted ? <ThankYou /> : <Form />}
     </main>
   );
 };

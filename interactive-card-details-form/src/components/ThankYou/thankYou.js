@@ -1,8 +1,16 @@
 import React from "react";
 import classes from "./ThankYou.module.css";
+import complete from "../../images/icon-complete.svg";
 
-const Thankyou = () => {
-  return <div>thankyou</div>;
+const ThankYou = () => {
+  return (
+    <div className={classes.thankYou}>
+      <img src={complete} alt="checkmark" />
+      <h2>THANK YOU!</h2>
+      <p className={classes.message}>We've added your card details</p>
+      <button>Continue</button>
+    </div>
+  );
 };
 
-export default Thankyou;
+export default ThankYou;
