@@ -55,4 +55,5 @@ input::placeholder {
   padding: 15px 0;
   border-radius: 8px;
   margin-top: 10px;
+  cursor: pointer;
 }
