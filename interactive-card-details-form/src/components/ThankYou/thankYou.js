@@ -1,8 +1,8 @@
 import React from "react";
-import classes from "./thankYou.module.css";
+import classes from "./ThankYou.module.css";
 
-const thankyou = () => {
+const Thankyou = () => {
   return <div>thankyou</div>;
 };
 
-export default thankyou;
+export default Thankyou;

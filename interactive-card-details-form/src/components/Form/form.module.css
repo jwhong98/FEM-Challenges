@@ -1,0 +1,58 @@
+.form {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: hsl(278, 68%, 11%);
+}
+
+input {
+  border: 1px solid hsl(270, 3%, 87%);
+  outline: none;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+input::placeholder {
+  color: hsl(270, 3%, 87%);
+}
+
+.cardInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.cardInfo input {
+  min-width: 0;
+}
+
+.dateInput {
+  display: flex;
+  min-width: 0;
+  gap: 5px;
+}
+
+.submit {
+  background: hsl(278, 68%, 11%);
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 15px 0;
+  border-radius: 8px;
+  margin-top: 10px;
+}

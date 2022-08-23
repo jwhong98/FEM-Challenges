@@ -1,0 +1,12 @@
+main {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 30% 1fr;
+}
+
+header {
+  background: url("../../images/bg-main-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
