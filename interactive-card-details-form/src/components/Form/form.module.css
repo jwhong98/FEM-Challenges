@@ -31,6 +31,16 @@ input::placeholder {
   color: hsl(270, 3%, 87%);
 }
 
+input:focus {
+  border-image-source: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  border-width: 1px;
+  border-image-slice: 1;
+}
+
+input:invalid {
+  border: 1px solid hsl(0, 100%, 66%);
+}
+
 .cardInfo {
   display: grid;
   grid-template-columns: 1fr 1fr;
