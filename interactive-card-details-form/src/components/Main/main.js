@@ -21,16 +21,18 @@ const Main = () => {
   return (
     <main>
       <header>
-        <div className={classes.cardBack}>
-          <p className={classes.cvc}>{cvc}</p>
-        </div>
-        <div className={classes.cardFront}>
-          <img className={classes.cardLogo} src={logo} alt="" />
-          <div className={classes.cardFrontInfo}>
-            <p className={classes.cardNum}>{cardNum}</p>
-            <div className={classes.sub}>
-              <p className={classes.cardName}>{name}</p>
-              <p className={classes.cardExp}>{date}</p>
+        <div className={classes.cardContainer}>
+          <div className={classes.cardBack}>
+            <p className={classes.cvc}>{cvc}</p>
+          </div>
+          <div className={classes.cardFront}>
+            <img className={classes.cardLogo} src={logo} alt="" />
+            <div className={classes.cardFrontInfo}>
+              <p className={classes.cardNum}>{cardNum}</p>
+              <div className={classes.sub}>
+                <p className={classes.cardName}>{name}</p>
+                <p className={classes.cardExp}>{date}</p>
+              </div>
             </div>
           </div>
         </div>

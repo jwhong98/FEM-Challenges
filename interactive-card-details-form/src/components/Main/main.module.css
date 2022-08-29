@@ -9,7 +9,21 @@ header {
   background: url("../../images/bg-main-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   position: relative;
+}
+
+.cardContainer {
+  width: 100%;
+  max-width: 500px;
+  position: absolute;
+  top: 30px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
 }
 
 .cardBack {
@@ -20,9 +34,7 @@ header {
   border-radius: 8px;
   width: 290px;
   height: 165px;
-  position: absolute;
-  right: 15px;
-  top: 30px;
+  align-self: flex-end;
   z-index: 3;
   display: flex;
   align-items: center;
@@ -43,10 +55,9 @@ header {
   border-radius: 8px;
   width: 290px;
   height: 165px;
-  position: absolute;
+  position: relative;
+  top: -72px;
   z-index: 4;
-  bottom: -55px;
-  left: 15px;
   padding: 20px;
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -77,4 +88,40 @@ header {
 .cardName,
 .cardExp {
   font-size: 10px;
+}
+
+@media screen and (min-width: 1281px) {
+  main {
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: none;
+  }
+
+  .cardContainer {
+    height: 490px;
+    max-width: 450px;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    left: 10vw;
+    margin: auto 0;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .cardBack {
+    width: 100%;
+    max-width: 450px;
+    height: 230px;
+    bottom: 0;
+    position: relative;
+    left: 100px;
+  }
+
+  .cardFront {
+    width: 100%;
+    max-width: 450px;
+    height: 230px;
+    top: 0;
+    align-self: flex-start;
+  }
 }

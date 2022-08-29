@@ -1,5 +1,7 @@
 .form {
   height: 100%;
+  max-width: 450px;
+  margin: auto;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -75,4 +77,11 @@ input:invalid {
   border-radius: 8px;
   margin-top: 10px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1281px) {
+  .form {
+    position: relative;
+    left: 100px;
+  }
 }
