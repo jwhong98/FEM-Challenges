@@ -1,5 +1,8 @@
 .thankYou {
   height: 100%;
+  width: 100%;
+  max-width: 550px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,4 +37,13 @@ button {
   border-radius: 8px;
   margin-top: 20px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1281px) {
+  .thankYou {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    left: 100px;
+  }
 }

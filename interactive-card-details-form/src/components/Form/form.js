@@ -23,15 +23,11 @@ const Form = (props) => {
     const year = document.getElementById("year").value;
     const cardNumber = document.getElementById("cardNumber").value;
     e.preventDefault();
+
     validateName(name);
     validateCard(cardNumber);
     validateCvc(cvc);
     validateDate(month, year);
-
-    props.setName(name);
-    props.setCardNum(cardNumber);
-    props.setDate(`${month}/${year}`);
-    props.setCvc(cvc);
 
     count === 4 && props.setSubmitted(true);
   };
@@ -42,15 +38,25 @@ const Form = (props) => {
       return false;
     }
     count++;
+    props.setName(n);
     return true;
   };
 
   const validateCard = (cardNum) => {
     if (/^\d{16}$/.test(cardNum.replace(/\s/g, ""))) {
       count++;
+      props.setCardNum(cardNum);
       return true;
     }
     document.getElementById("cardNumber").setCustomValidity("Invalid");
+    if (cardNum === "") {
+      document.getElementById("cardNumError").innerText = `Can't be blank`;
+    } else {
+      document.getElementById(
+        "cardNumError"
+      ).innerText = `Wrong format, numbers only`;
+      props.setCardNum(cardNum);
+    }
     document.getElementById("cardNumError").style.display = "block";
     return false;
   };
@@ -58,12 +64,21 @@ const Form = (props) => {
   const validateDate = (m, y) => {
     if (/^\d{2}$/.test(m) && /^\d{2}$/.test(y)) {
       count++;
+      props.setDate(`${m}/${y}`);
       return true;
     }
-    if (!m) {
+
+    if (!m && y) {
       document.getElementById("month").setCustomValidity("Invalid");
+      props.setDate(`00/${y}`);
+    } else if (!y && m) {
+      document.getElementById("year").setCustomValidity("Invalid");
+      props.setDate(`${m}/00`);
+    } else {
+      document.getElementById("month").setCustomValidity("Invalid");
+      document.getElementById("year").setCustomValidity("Invalid");
     }
-    document.getElementById("year").setCustomValidity("Invalid");
+
     document.getElementById("dateError").style.display = "block";
     return false;
   };
@@ -71,14 +86,18 @@ const Form = (props) => {
   const validateCvc = (cvc) => {
     if (/^\d{3}$/.test(cvc)) {
       count++;
+      props.setCvc(cvc);
       return true;
+    }
+    if (!cvc) {
+      document.getElementById("cvcError").innerText = `Can't be blank`;
     }
     document.getElementById("cvc").setCustomValidity("Invalid");
     document.getElementById("cvcError").style.display = "block";
     return false;
   };
   return (
-    <form className={classes.form}>
+    <form autoComplete="off" className={classes.form}>
       <div className={classes.info}>
         <label htmlFor="name">cardholder name</label>
         <input type="text" id="name" placeholder="e.g. Jane Appleseed" />
@@ -92,11 +111,10 @@ const Form = (props) => {
           type="text"
           id="cardNumber"
           placeholder="e.g. 1234 5678 9123 0000"
+          maxLength="19"
           onKeyPress={onChange}
         />
-        <p className={classes.cardError} id="cardNumError">
-          Wrong format, numbers only
-        </p>
+        <p className={classes.cardError} id="cardNumError"></p>
       </div>
 
       <div className={classes.cardInfo}>
@@ -111,7 +129,7 @@ const Form = (props) => {
           Can't be blank
         </p>
         <p className={classes.cardError} id="cvcError">
-          Can't be blank
+          Wrong format, numbers only
         </p>
       </div>
       <button

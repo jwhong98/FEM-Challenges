@@ -1,6 +1,6 @@
 .form {
   height: 100%;
-  max-width: 450px;
+  max-width: 550px;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -43,6 +43,8 @@ input:focus {
   border-image-source: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
   border-width: 1px;
   border-image-slice: 1;
+  outline: none;
+  border-radius: 8px;
 }
 
 input:invalid {
@@ -83,5 +85,6 @@ input:invalid {
   .form {
     position: relative;
     left: 100px;
+    max-width: 450px;
   }
 }

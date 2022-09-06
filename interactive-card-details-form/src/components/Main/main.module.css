@@ -45,6 +45,7 @@ header {
 .cvc {
   font-size: 10px;
   color: #fff;
+  letter-spacing: 2px;
 }
 
 .cardFront {
@@ -123,5 +124,30 @@ header {
     height: 230px;
     top: 0;
     align-self: flex-start;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .cardFront {
+    padding: 25px;
+  }
+
+  .cardLogo {
+    width: 70px;
+  }
+
+  .cardFrontInfo {
+    letter-spacing: 3px;
+  }
+
+  .cardNum {
+    font-size: 25px;
+  }
+
+  .cardName,
+  .cardExp,
+  .cvc {
+    font-size: 13px;
+    letter-spacing: 3px;
   }
 }
